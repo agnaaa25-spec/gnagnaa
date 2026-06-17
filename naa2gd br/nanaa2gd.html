@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naa2gd | Jual Beli Mobil Berkualitas Bandung</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#F8FAFC',    /* 60% Clean Light Slate */
+                        secondary: '#0F172A',  /* 30% Deep Midnight Blue */
+                        accent: '#FF6B00',     /* 10% Energetic Orange */
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-primary text-secondary font-sans antialiased">
+
+    <!-- 1. SITEMAP & STRUKTUR NAVIGASI (HEADER) -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="text-2xl font-bold tracking-tight text-secondary">
+                naa<span class="text-accent">2gd</span><span class="text-xs block text-slate-500 font-medium">Bandung</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#" class="text-accent">Beranda</a>
+                <a href="#katalog" class="text-slate-600 hover:text-secondary transition">Beli Mobil</a>
+                <a href="#jual" class="text-slate-600 hover:text-secondary transition">Jual / Tukar Tambah</a>
+                <a href="#kalkulator" class="text-slate-600 hover:text-secondary transition">Simulasi Kredit</a>
+                <a href="#testimoni" class="text-slate-600 hover:text-secondary transition">Testimoni</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:flex items-center">
+                <a href="https://wa.me/628123456789?text=Halo%20naa2gd%20Bandung%2C%20saya%20ingin%20konsultasi%20mobil." target="_blank" class="bg-accent hover:bg-orange-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-md shadow-orange-500/20 transition-all transform hover:-translate-y-0.5">
+                    Hubungi Agen
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. HOMEPAGE - SECTION 1: HERO BANNER -->
+        <section class="relative bg-secondary overflow-hidden py-24 lg:py-32">
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-orange-400 mb-6 tracking-wide uppercase">
+                    📍 Showroom Utama: Bandung
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight max-w-4xl mx-auto leading-tight">
+                    Cari Mobil Bagus di Bandung? Di naa2gd Aja, Semua Pasti <span class="text-accent">Too Good!</span>
+                </h1>
+                <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-light">
+                    Miliki mobil baru atau bekas berkualitas tanpa cemas. Semua unit bergaransi resmi 1 tahun dan lolos inspeksi ketat 150 titik.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#katalog" class="bg-accent hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-base shadow-lg shadow-orange-500/30 transition">
+                        Lihat Stok Mobil
+                    </a>
+                    <a href="#jual" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-base transition">
+                        Jual Mobil Anda
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FITUR UTAMA: QUICK SEARCH BAR (FLOATING WIDGET) -->
+        <section class="max-w-6xl mx-auto px-4 -mt-12 relative z-10">
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100">
+                <form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">Merek</label>
+                        <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+                            <option>Semua Merek</option>
+                            <option>Honda</option>
+                            <option>Toyota</option>
+                            <option>Mitsubishi</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">Jenis Bodi</label>
+                        <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+                            <option>Semua Tipe</option>
+                            <option>SUV</option>
+                            <option>MPV</option>
+                            <option>Sedan</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">Rentang Harga</label>
+                        <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+                            <option>Semua Harga</option>
+                            <option>Under Rp 150 Juta</option>
+                            <option>Rp 150 - 300 Juta</option>
+                            <option>Above Rp 300 Juta</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button type="button" class="w-full bg-secondary hover:bg-slate-800 text-white font-bold py-3 px-4 rounded-xl text-sm transition">
+                            Cari Mobil
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- HOMEPAGE - SECTION 2: VALUE PROPOSITION (USP) -->
+        <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Standar Transparansi Baru di Bandung</h2>
+                <p class="mt-4 text-slate-500">Kami membuang semua rasa khawatir Anda dalam transaksi jual beli mobil.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- USP 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-accent mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Garansi Mesin 1 Tahun</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">Bebas khawatir di jalan. Kami menjamin perlindungan penuh komponen utama mesin & transmisi selama 365 hari.</p>
+                </div>
+                <!-- USP 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Lolos 150+ Titik Inspeksi</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">Transparansi total. Setiap mobil menyertakan laporan sertifikat inspeksi mekanik digital profesional secara terbuka.</p>
+                </div>
+                <!-- USP 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Kredit Mudah & Fleksibel</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">Bekerja sama dengan partner leasing resmi terbaik di Jawa Barat untuk DP rendah dan persetujuan kilat.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOMEPAGE - SECTION 3: REKOMENDASI MOBIL PILIHAN (DENGAN FOTO) -->
+        <section id="katalog" class="py-20 bg-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12">
+                    <div>
+                        <h2 class="text-3xl font-bold tracking-tight">Koleksi Pilihan Terbaik</h2>
+                        <p class="mt-2 text-slate-500">Unit terawat, pajak panjang, dan siap pakai keliling kota.</p>
+                    </div>
+                    <div class="mt-4 sm:mt-0 inline-flex rounded-lg bg-slate-200 p-1">
+                        <button class="bg-white text-secondary px-4 py-2 text-sm font-semibold rounded-md shadow-sm">Semua Stok</button>
+                        <button class="text-slate-600 hover:text-secondary px-4 py-2 text-sm font-medium rounded-md">Mobil Bekas</button>
+                        <button class="text-slate-600 hover:text-secondary px-4 py-2 text-sm font-medium rounded-md">Mobil Baru</button>
+                    </div>
+                </div>
+
+                <!-- Product Grid (Foto menggunakan Unsplash Car Stock Images) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Unit Card 1 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col border border-slate-200/60">
+                        <div class="relative aspect-[16/10] bg-slate-100">
+                            <!-- Image URL dari Unsplash (Sudut Modern / Clean) -->
+                            <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=600&q=80" alt="Honda HR-V" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-green-500 text-white font-semibold text-xs px-2.5 py-1 rounded-md uppercase tracking-wider shadow">Lolos Inspeksi</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-lg font-bold">Honda HR-V 1.5 SE Facelift</h3>
+                                <div class="mt-2 flex space-x-4 text-xs text-slate-500 font-medium">
+                                    <span>⏱️ 24.000 KM</span>
+                                    <span>⚙️ Otomatis</span>
+                                    <span>⛽ Bensin</span>
+                                </div>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                                <div>
+                                    <span class="block text-xs text-slate-400 font-medium">Harga Cash</span>
+                                    <span class="text-xl font-bold text-secondary">Rp 315.000.000</span>
+                                </div>
+                                <a href="https://wa.me/628123456789?text=Halo%20naa2gd%2C%20saya%20tertarik%20dengan%20Honda%20HR-V%202022%20yang%20di%20website." target="_blank" class="bg-secondary hover:bg-accent text-white p-2.5 rounded-xl transition">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unit Card 2 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col border border-slate-200/60">
+                        <div class="relative aspect-[16/10] bg-slate-100">
+                            <!-- Image URL dari Unsplash SUV Premium -->
+                            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80" alt="Toyota SUV" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-green-500 text-white font-semibold text-xs px-2.5 py-1 rounded-md uppercase tracking-wider shadow">Lolos Inspeksi</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-lg font-bold">Toyota Avanza 1.5 G Veloz</h3>
+                                <div class="mt-2 flex space-x-4 text-xs text-slate-500 font-medium">
+                                    <span>⏱️ 42.000 KM</span>
+                                    <span>⚙️ Manual</span>
+                                    <span>⛽ Bensin</span>
+                                </div>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                                <div>
+                                    <span class="block text-xs text-slate-400 font-medium">Harga Cash</span>
+                                    <span class="text-xl font-bold text-secondary">Rp 210.000.000</span>
+                                </div>
+                                <a href="https://wa.me/628123456789?text=Halo%20naa2gd%2C%20saya%20tertarik%20dengan%20Toyota%20Avanza%202021%20yang%20di%20website." target="_blank" class="bg-secondary hover:bg-accent text-white p-2.5 rounded-xl transition">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unit Card 3 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col border border-slate-200/60">
+                        <div class="relative aspect-[16/10] bg-slate-100">
+                            <!-- Image URL dari Unsplash Modern SUV Putih -->
+                            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80" alt="Mitsubishi SUV" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-green-500 text-white font-semibold text-xs px-2.5 py-1 rounded-md uppercase tracking-wider shadow">Lolos Inspeksi</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-lg font-bold">Mitsubishi Xpander Ultimate</h3>
+                                <div class="mt-2 flex space-x-4 text-xs text-slate-500 font-medium">
+                                    <span>⏱️ 11.000 KM</span>
+                                    <span>⚙️ Otomatis</span>
+                                    <span>⛽ Bensin</span>
+                                </div>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                                <div>
+                                    <span class="block text-xs text-slate-400 font-medium">Harga Cash</span>
+                                    <span class="text-xl font-bold text-secondary">Rp 289.000.000</span>
+                                </div>
+                                <a href="https://wa.me/628123456789?text=Halo%20naa2gd%2C%20saya%20tertarik%20dengan%20Mitsubishi%20Xpander%202023%20yang%20di%20website." target="_blank" class="bg-secondary hover:bg-accent text-white p-2.5 rounded-xl transition">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FITUR UTAMA: INTERACTIVE CREDIT CALCULATOR SECTION -->
+        <section id="kalkulator" class="py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden grid grid-cols-1 md:grid-cols-2">
+                <!-- Inputs -->
+                <div class="p-8 lg:p-12 bg-slate-50">
+                    <h2 class="text-2xl font-bold mb-2">Simulasi Kredit</h2>
+                    <p class="text-slate-500 text-sm mb-8">Hitung estimasi pengeluaran bulanan Anda secara mandiri.</p>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-2">
+                                <label>Harga Kendaraan</label>
+                                <span class="text-accent" id="lbl-harga">Rp 250 Juta</span>
+                            </div>
+                            <input type="range" id="inp-harga" min="100000000" max="600000000" step="10000000" value="250000000" class="w-full accent-accent">
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-2">
+                                <label>Uang Muka (DP) - 20%</label>
+                                <span class="text-accent" id="lbl-dp">Rp 50 Juta</span>
+                            </div>
+                            <input type="range" id="inp-dp" min="20000000" max="200000000" step="500000" value="50000000" class="w-full accent-accent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Tenor (Tahun)</label>
+                            <select id="inp-tenor" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none">
+                                <option value="12">1 Tahun (12 Bulan)</option>
+                                <option value="24">2 Tahun (24 Bulan)</option>
+                                <option value="36">3 Tahun (36 Bulan)</option>
+                                <option value="48" selected>4 Tahun (48 Bulan)</option>
+                                <option value="60">5 Tahun (60 Bulan)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- Results Output -->
+                <div class="p-8 lg:p-12 bg-secondary text-white flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs uppercase font-bold tracking-wider text-slate-400">Estimasi Angsuran</span>
+                        <div class="text-4xl lg:text-5xl font-extrabold text-accent mt-2 mb-1" id="out-cicilan">Rp 5.230.000</div>
+                        <p class="text-xs text-slate-400 font-light">*Nilai di atas merupakan simulasi kasar belum termasuk bunga leasing & asuransi daerah Jawa Barat.</p>
+                    </div>
+                    
+                    <a href="https://wa.me/628123456789?text=Halo%20naa2gd%2C%20saya%20sudah%20mencoba%20simulasi%20kredit%20dan%20tertarik%20mengajukan%20pembiayaan." target="_blank" class="w-full text-center bg-white hover:bg-slate-100 text-secondary font-bold py-4 rounded-xl text-sm transition mt-8 inline-block">
+                        Ajukan Pembiayaan Resmi
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOMEPAGE - SECTION 4: FORMULIR PENGAJUAN JUAL MOBIL -->
+        <section id="jual" class="py-20 bg-orange-600 text-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Ingin Jual atau Tukar Tambah?</h2>
+                    <p class="mt-4 text-orange-100 leading-relaxed font-light">
+                        Dapatkan penawaran harga objektif terbaik dan akurat dari tim appraisal berpengalaman naa2gd hanya dalam waktu 1 Jam.
+                    </p>
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="flex-shrink-0 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-xs font-bold">1</span>
+                            <span class="text-sm font-medium">Isi data ringkas kendaraan Anda</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="flex-shrink-0 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-xs font-bold">2</span>
+                            <span class="text-sm font-medium">Tim inspeksi kami datang ke lokasi Anda</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="flex-shrink-0 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-xs font-bold">3</span>
+                            <span class="text-sm font-medium">Dana langsung cair hari itu juga</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 bg-white text-secondary p-8 rounded-2xl shadow-xl">
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 mb-2">Nama Lengkap</label>
+                                <input type="text" placeholder="Contoh: Ridwan Kamil" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 mb-2">Nomor WhatsApp</label>
+                                <input type="tel" placeholder="0812XXXXXXX" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="sm:col-span-2">
+                                <label class="block text-xs font-bold text-slate-500 mb-2">Merek & Tipe Mobil</label>
+                                <input type="text" placeholder="Contoh: Toyota Yaris G 2019" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 mb-2">Transmisi</label>
+                                <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+                                    <option>Otomatis</option>
+                                    <option>Manual</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" class="w-full bg-secondary hover:bg-slate-800 text-white font-bold py-4 rounded-xl text-sm transition">
+                            Kirim Data — Dapatkan Taksasi Harga
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOMEPAGE - SECTION 5: TESTIMONI / SOCIAL PROOF -->
+        <section id="testimoni" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight">Apa Kata Wargi Bandung Tentang Kami?</h2>
+                <p class="mt-4 text-slate-500">Bukti kepuasan nyata atas transparansi sistem dan layanan naa2gd.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testi Card -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+                    <p class="text-slate-600 text-sm leading-relaxed font-light">
+                        "Sangat terbantu beli mobil bekas disini. Sistem inspeksi 150 titiknya beneran transparan dikasih lihat semua minusnya, jadi ga seperti beli kucing dalam karung."
+                    </p>
+                    <div class="mt-6 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-xs">DI</div>
+                        <div>
+                            <span class="block text-sm font-bold text-secondary">Dika Irawan</span>
+                            <span class="block text-xs text-slate-400">Dago, Bandung</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testi Card -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+                    <p class="text-slate-600 text-sm leading-relaxed font-light">
+                        "Proses tukar tambah mobil lama saya ke expander lancar banget, dihargai tinggi dibanding tempat lain. Terus dapet garansi 1 tahun pula, mantap naa2gd!"
+                    </p>
+                    <div class="mt-6 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-xs">AM</div>
+                        <div>
+                            <span class="block text-sm font-bold text-secondary">Anisa Marlina</span>
+                            <span class="block text-xs text-slate-400">Buah Batu, Bandung</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testi Card -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+                    <p class="text-slate-600 text-sm leading-relaxed font-light">
+                        "Awalnya ragu soal pengajuan kreditnya, ternyata tim naa2gd bantu urus dari nol sampai ACC cepet banget. Unit diantar mulus sampai garasi rumah."
+                    </p>
+                    <div class="mt-6 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-xs">FH</div>
+                        <div>
+                            <span class="block text-sm font-bold text-secondary">Faza Handy</span>
+                            <span class="block text-xs text-slate-400">Cibaduyut, Bandung</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER COMPONENT -->
+    <footer class="bg-secondary text-slate-400 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div>
+                <span class="text-2xl font-bold text-white tracking-tight">naa<span class="text-accent">2gd</span></span>
+                <p class="mt-4 text-sm text-slate-400 leading-relaxed font-light">
+                    Solusi ekosistem jual beli otomotif terpercaya di Bandung. Mengedepankan transparansi produk dan kepuasan finansial konsumen.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Navigasi</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#katalog" class="hover:text-white transition">Katalog Stok</a></li>
+                    <li><a href="#jual" class="hover:text-white transition">Jual Mobil</a></li>
+                    <li><a href="#kalkulator" class="hover:text-white transition">Kalkulator Finansial</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Kontak Showroom</h4>
+                <p class="text-sm leading-relaxed font-light">
+                    Jl. Soekarno-Hatta No. 123,<br>Kota Bandung, Jawa Barat<br>
+                    <span class="block mt-2">📞 (022) 7654-321</span>
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Jam Operasional</h4>
+                <p class="text-sm font-light">Senin - Sabtu: 09.00 - 18.00 WIB<br>Minggu: Dengan Janji Temu</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between text-xs font-light">
+            <p>&copy; 2026 naa2gd Bandung. Seluruh Hak Cipta Dilindungi.</p>
+            <div class="mt-4 sm:mt-0 space-x-4">
+                <a href="#" class="hover:text-white">Kebijakan Privasi</a>
+                <a href="#" class="hover:text-white">Syarat & Ketentuan</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPT (JAVASCRIPT) FOR CREDIT CALCULATOR -->
+    <script>
+        const inpHarga = document.getElementById('inp-harga');
+        const inpDp = document.getElementById('inp-dp');
+        const inpTenor = document.getElementById('inp-tenor');
+        
+        const lblHarga = document.getElementById('lbl-harga');
+        const lblDp = document.getElementById('lbl-dp');
+        const outCicilan = document.getElementById('out-cicilan');
+
+        function formatRupiah(num) {
+            return 'Rp ' + (num / 1000000).toFixed(0) + ' Juta';
+        }
+
+        function calculateLoan() {
+            const harga = parseInt(inpHarga.value);
+            const minDp = harga * 0.2;
+            inpDp.min = minDp;
+            if(parseInt(inpDp.value) < minDp) {
+                inpDp.value = minDp;
+            }
+
+            const dp = parseInt(inpDp.value);
+            const tenorBulan = parseInt(inpTenor.value);
+            
+            lblHarga.innerText = formatRupiah(harga);
+            lblDp.innerText = formatRupiah(dp);
+
+            const pokokUtang = harga - dp;
+            const totalBunga = pokokUtang * (0.05 * (tenorBulan / 12));
+            const totalUtang = pokokUtang + totalBunga;
+            const cicilanPerBulan = Math.round(totalUtang / tenorBulan);
+
+            outCicilan.innerText = 'Rp ' + cicilanPerBulan.toLocaleString('id-ID');
+        }
+
+        inpHarga.addEventListener('input', calculateLoan);
+        inpDp.addEventListener('input', calculateLoan);
+        inpTenor.addEventListener('change', calculateLoan);
+
+        calculateLoan();
+    </script>
+</body>
+</html>
